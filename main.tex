@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{cv-en}
+
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+
+\setmainfont[
+ BoldFont={Fontin-Bold.otf}, 
+ ItalicFont={Fontin-Italic.otf},
+ SmallCapsFont={Fontin-SmallCaps.otf},
+ ]{Fontin-Regular.otf}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+\usepackage{wrapfig}
+\usepackage[margin=0.9in, top=0.65in, bottom=0.65in]{geometry}
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{-0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+
+%\begin{wrapfigure}{r}{0.14\textwidth}
+%	\vspace*{-2em}
+%		\includegraphics[width=0.14\textwidth]{prof.jpg}
+%\end{wrapfigure}
+\par{\centering{\Huge{ \textsc{Máté Molnár}}}}\\ \emph{Curriculum Vitae}\bigskip
+
+
+\section{Personal Data}
+\begin{tabular}{rl}
+%\textsc{Date of birth:} & 25 November 1991\\
+%\textsc{Phone:} & +36 30 580 8601\\
+\textsc{E-mail:} & \href{mailto:me@matem.me}{\texttt{me@matem.me}} \\
+\textsc{Webpage:} & \href{https://matem.me}{\texttt{https://matem.me}}
+\end{tabular}
+
+
+\section{Education}
+\begin{tabular}{r|p{12.5cm}}
+\textsc{2010--2016} & \textbf{Engineering Information Technology} B.Sc. at \emph{Budapest University of Technology and Economics}\\
+& \footnotesize{Thesis: } Developed a RESTful \emph{Node.JS} web application for visualizing 2D datasets using \emph{hapi.js}, \emph{Bootstrap}, \emph{amCharts}  and \emph{jQuery}.\\
+% Used technologies:
+% 	Server side application framework: hapi.js
+% 	Data exchange: JSON
+% 	Frontend development framework: Bootstrap and jQuery
+% 	Displaying data and interactions: D3.js
+\multicolumn{2}{c}{} \\
+\textsc{2006--2010} & Graduated in \emph{Váci Mihály Gimnázium}, Tiszavasvári \\
+& \footnotesize{Major in English and Informatics}\\
+\end{tabular}
+
+
+\section{Scholarships and Certificates}
+\begin{tabular}{r|p{12.5cm}}
+\textsc{2013--2014} & Darmasiswa Indonesian Scholarship Program: \textbf{Indonesian language and culture}  \\
+\multicolumn{2}{c}{} \\
+2010 & \textbf{English language exam}: advanced level (\textsc{C1})  \\
+\multicolumn{2}{c}{} \\
+2010 & 2F Iskola: \textbf{Web Application Developer}  \\
+\multicolumn{2}{c}{} \\
+2009 & \textbf{Driving license}: Category B  \\
+\end{tabular}
+
+
+\section{Related Work Experience}
+\begin{tabular}{r|p{12.5cm}}
+\textsc{2016--2020} & \textbf{Devops Engineer} at \emph{Deutsche Telekom}, Remote \\
+& \footnotesize{Worked on the Charging and Billing Services project. Maintained and improved the custom build and CI system written in bash. Maintained the \emph{makefiles} for the \emph{C++} sources and \emph{Apache Ant} build files for the \emph{Java} sources. Delivered the software into test and production environments. Migrated the version control from \emph{ClearCase} to \emph{Git} for the development teams}. Developed internal services using \emph{Go} and \emph{React}. Implemented the CI pipeline using \emph{Gitlab CI} and \emph{Jenkins}.\\
+
+\multicolumn{2}{c}{} \\
+\textsc{2018--2019} & \textbf{Fullstack Development Consultant} at \emph{ViddL}, Budapest \\
+& \footnotesize{Worked on the Charging and Billing Services project. Maintained and improved the custom build and CI system written in bash. Maintained the \emph{makefiles} for the \emph{C++} sources and \emph{Apache Ant} build files for the \emph{Java} sources. Delivered the software into test and production environments. Migrated the version control from \emph{ClearCase} to \emph{Git} for the development teams}. Developed internal services using \emph{Go} and \emph{React}. Implemented the CI pipeline using \emph{Gitlab CI} and \emph{Jenkins}.\\
+
+\multicolumn{2}{c}{} \\
+
+\textsc{2014--2016} & \textbf{Build Engineer} trainee at \emph{Nokia Networks}, Budapest \\
+%& \footnotesize{Worked using the \emph{Kanban} method to reach \emph{Continous Delivery} on the Cloud Application Manager application. Migrated a 400+ module \emph{Java} project from \emph{Apache Maven} to the \emph{Gradle} build system. Developed plugins for Gradle and managed the \emph{Jenkins} Continuous Integration platform. Maintained the \emph{Ansible} playbooks and the configuration files for Jenkins, \emph{Nexus} and \emph{SonarQube} applications. Created a single page web-application for displaying build and test related analytics using Node.JS and jQuery.}\\
+& \footnotesize{Worked in a group of 3 to improve and speed up the automated build and test processes of Nokia’s Cloud Application Manager application (written in Java).
+Migrated a 400+ module \emph{Java} project from \emph{Apache Maven} to the \emph{Gradle} build system. Developed plugins for Gradle and managed the \emph{Jenkins} Continuous Integration platform. Maintained the \emph{Ansible} playbooks and the configuration files for Jenkins, \emph{Nexus} and \emph{SonarQube} applications. Created a single page web-application for displaying build and test related analytics using \emph{Node.JS} and \emph{jQuery}.}\\
+
+
+
+% Used technologies:
+% 	Programming langues: Java, Groovy
+% 	Build tools: Apache Maven, Gradle
+% 	Configuration management tool: Ansible
+% Platforms I was responsible for maintaining:
+% 	Continous integration platform: Jenkins
+% 	Code quality platform: SonarQube
+% 	Repository management tool: Sonatype Nexus
+\end{tabular}
+
+
+\section{Languages}
+\begin{tabular}{rl}
+\textsc{Hungarian:} & Mothertongue\\
+\textsc{English:} &  Professional user, reading, writing and speaking\\
+\end{tabular}
+
+
+\section{Computer Skills}
+\begin{tabular}{rl}
+Languages: & \textsc{bash}, \textsc{python}, \textsc{JavaScript}, \textsc{Groovy}, \textsc{Go} \\
+Tools: &  \textsc{git}, \textsc{svn}, \textsc{Gradle}, \textsc{Jenkins}, \textsc{make}
+\end{tabular}
+
+
+\section{Interests and Activities}
+Technology, music \\
+Skiing, squash
+\end{document}
