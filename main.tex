@@ -1,4 +1,4 @@
-\title{cv-en}
+\title{cv-matem}
 
 \documentclass[a4paper,10pt]{article} % Default font size and paper size
 
@@ -14,7 +14,7 @@
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
 \usepackage{wrapfig}
-\usepackage[margin=0.9in, top=0.65in, bottom=0.65in]{geometry}
+\usepackage[margin=0.9in, top=0.40in, bottom=0.40in]{geometry}
 \usepackage{hyperref} % Required for adding links   and customizing them
 \definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
@@ -29,52 +29,37 @@
 
 \par{\centering{\Huge{ \textsc{Máté Molnár}}}}\\ \emph{Curriculum Vitae}\bigskip
 
-
 \section{Personal Data}
 \begin{tabular}{rl}
 \textsc{E-mail:} & \href{mailto:me@matem.me}{\texttt{me@matem.me}} \\
-\textsc{Webpage:} & \href{https://matem.me}{\texttt{https://matem.me}}
+\textsc{Phone:} & \href{tel:+36305808601}{\texttt{+36305808601}}
 \end{tabular}
-
 
 \section{Education}
 \begin{tabular}{r|p{12.5cm}}
 \textsc{2010--2016} & \textbf{Engineering Information Technology} B.Sc. at \emph{Budapest University of Technology and Economics}\\
 & \footnotesize{Thesis: } Developed a RESTful \emph{Node.JS} web application for visualizing 2D datasets using \emph{hapi.js}, \emph{Bootstrap}, \emph{amCharts}  and \emph{jQuery}.\\
-%\multicolumn{2}{c}{} \\
-%\textsc{2006--2010} & Graduated in \emph{Váci Mihály Gimnázium}, Tiszavasvári \\
-%& \footnotesize{Major in English and Informatics}\\
 \end{tabular}
-
-
-%\section{Scholarships and Certificates}
-%\begin{tabular}{r|p{12.5cm}}
-%\textsc{2013--2014} & Darmasiswa Indonesian Scholarship Program: \textbf{Indonesian language and culture}  \\
-%\multicolumn{2}{c}{} \\
-%2010 & \textbf{English language exam}: advanced level (\textsc{C1})  \\
-%\multicolumn{2}{c}{} \\
-%2010 & 2F Iskola: \textbf{Web Application Developer}  \\
-%\multicolumn{2}{c}{} \\
-%2009 & \textbf{Driving license}: Category B  \\
-%\end{tabular}
-
 
 \section{Work Experience}
 \begin{tabular}{r|p{12.5cm}}
 
-\textsc{2020} & \textbf{Devops Consultant}, \href{https://hsup.nkfih.gov.hu}{\emph{Hungarian Startup University Program}} \\
-& \footnotesize{Worked alone as a Devops Engineer to set up and automate the deployments of the HSUP application and related services. Created continuous integration and delivery pipelines using GitHub Actions. Set up development, test and production environments using Docker Swarm. Set up monitoring and alerting using the Elastic stack.}\\
+\textsc{2020--} & \textbf{Devops Engineer} at \emph{Robert Bosch}, Remote \\
+& \footnotesize{Worked on the \emph{KPI Framework} project which visualizes data obtained from GitHub and BitBucket in Grafana. Fixed issues in the application (Python), in the infrastructure code (Ansible, Kubernetes, docker-compose) and around CI/CD (Jenkins). Took part in redesigning the architecture to run the service as functions on Azure Cloud. 
+
+Worked on the \emph{DroneTruth} project which uses machine learning to generate ground truth for autonomous driving software based on drone camera recordings. Used \emph{Azure DevOps} to run machine learning pipelines. Used \emph{Terraform} for managing cloud based GPU development environments. Created a Python CLI application using the Azure SDK to make the management of development environments self-service. Used \emph{Kubernetes} and \emph{Helm} with \emph{Flux2} to deploy applications on \emph{Azure Kubernetes Service}.
+}\\
 
 \multicolumn{2}{c}{} \\
-\textsc{2020} & \textbf{Devops Consultant} at \emph{Inepex}, Remote \\
-& \footnotesize{Automated the delivery of a new cross platform mobile application written in Flutter to Play Store (Android) and TestFlight (iOS) using Fastlane.}\\
+\textsc{2020--2021} & \textbf{Devops Consultant}, \href{https://hsup.nkfih.gov.hu}{\emph{Hungarian Startup University Program}} \\
+& \footnotesize{Worked alone to set up and automate the deployments of the HSUP application and related services. Created continuous integration and delivery pipelines using GitHub Actions and Renovate. Set up development, test and production environments using Docker Swarm. Set up monitoring and alerting using the Elastic (ElasticSearch, Kibana, Beats, APM) and Grafana (Prometheus, Loki, Tempo) stacks.}\\
 
 \multicolumn{2}{c}{} \\
 \textsc{2018--2019} & \textbf{Fullstack Development Consultant} at \emph{ViddL}, Budapest \\
-& \footnotesize{Worked on several applications written in JavaScript and TypeScript (Express, NestJs, React). Used MongoDB to store user data.}\\
+& \footnotesize{Worked on several applications written in JavaScript and TypeScript (Express, NestJs, React, MongoDB).}\\
 
 \multicolumn{2}{c}{} \\
-\textsc{2016--2020} & \textbf{Devops Engineer} at \emph{Deutsche Telekom}, Remote \\
+\textsc{2016--2020} & \textbf{Release Engineer / Devops Engineer} at \emph{Deutsche Telekom}, Remote \\
 & \footnotesize{Worked on the Charging and Billing Services project. Maintained and improved the custom build and CI system written in bash. Maintained the makefiles for the C++ sources and Apache Ant build files for the Java sources. Delivered the software into test and production environments. Migrated the version control from ClearCase to Git for the development teams}. Developed internal services using Go and React. Implemented the CI pipeline using Gitlab CI and Jenkins.\\
 
 \multicolumn{2}{c}{} \\
@@ -92,11 +77,12 @@ Migrated the build scripts from Apache Maven to Gradle. Developed plugins for Gr
 
 \section{Computer Skills}
 \begin{tabular}{rl}
-Languages: & \textsc{bash}, \textsc{python}, \textsc{JavaScript}, \textsc{Groovy}, \textsc{Go} \\
-Tools: &  \textsc{git}, \textsc{svn}, \textsc{Gradle}, \textsc{Jenkins}, \textsc{make}, \textsc{Docker}
+Languages: & \textsc{bash}, \textsc{python}, \textsc{JavaScript} (\textsc{nodejs, React}), \textsc{Groovy}, \textsc{Go} \\
+Tools: &  \textsc{git}, \textsc{Gradle}, \textsc{Jenkins}, \textsc{Ansible}, \textsc{Terraform}, \textsc{Docker}, \textsc{Kubernetes}
+
 \end{tabular}
 
 \section{Interests and Activities}
 Technology, music \\
-Skiing, squash
+Skiing, biking, wakeboarding, squash
 \end{document}
