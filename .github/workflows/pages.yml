@@ -35,12 +35,12 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
+          root_file: cv-matem.tex
           latexmk_use_xelatex: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: '.'
+          path: './cv-matem.pdf'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
