@@ -2,16 +2,18 @@
 
 \documentclass[a4paper,10pt]{article} % Default font size and paper size
 
-\usepackage{fontspec} % For loading fonts
-\defaultfontfeatures{Mapping=tex-text}
+% \usepackage{fontspec} % For loading fonts
+% \defaultfontfeatures{Mapping=tex-text}
 
-\setmainfont[
- BoldFont={Fontin-Bold.otf}, 
- ItalicFont={Fontin-Italic.otf},
- SmallCapsFont={Fontin-SmallCaps.otf},
- ]{Fontin-Regular.otf}
+% \setmainfont[
+%  BoldFont={Fontin-Bold.otf},
+%  ItalicFont={Fontin-Italic.otf},
+%  SmallCapsFont={Fontin-SmallCaps.otf},
+%  ]{Fontin-Regular.otf}
 
-\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+% \usepackage{xunicode} % Formatting packages
+% \usepackage{xltxtra} % Formatting packages
+\usepackage{url,parskip} % Formatting packages
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
 \usepackage{wrapfig}
 \usepackage[margin=0.9in, top=0.40in, bottom=0.40in]{geometry}
@@ -23,44 +25,82 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{-0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
-\begin{document}
+\usepackage{enumitem} % For customizing lists
+\setlist[itemize]{leftmargin=*, topsep=0pt, itemsep=2pt, parsep=0pt, partopsep=0pt, label=\footnotesize{\textbullet}} % Customizing itemize lists
 
+\begin{document}
 \pagestyle{empty} % Removes page numbering
 
-\par{\centering{\Huge{ \textsc{Máté Molnár}}}}\\ \emph{Curriculum Vitae}\bigskip
+\par{\centering{\Huge{ \textsc{Maté Molnar}}}}\\ \emph{Curriculum Vitae}\bigskip
 
 \section{Personal Data}
 \begin{tabular}{rl}
 \textsc{E-mail:} & \href{mailto:me@matem.me}{\texttt{me@matem.me}} \\
-\textsc{Phone:} & \href{tel:+36305808601}{\texttt{+36305808601}}
+\textsc{Phone:} & \href{tel:+41766727186}{\texttt{+41766727186}}
 \end{tabular}
 
 \section{Education}
 \begin{tabular}{r|p{12.5cm}}
 \textsc{2010--2016} & \textbf{Engineering Information Technology} B.Sc. at \emph{Budapest University of Technology and Economics}\\
-& \footnotesize{Thesis: } Developed a RESTful \emph{Node.JS} web application for visualizing 2D datasets using \emph{hapi.js}, \emph{Bootstrap}, \emph{amCharts}  and \emph{jQuery}.\\
 \end{tabular}
 
 \section{Work Experience}
 \begin{tabular}{r|p{12.5cm}}
 
-\textsc{2020--} & \textbf{Devops Engineer} at \emph{Robert Bosch}, Remote \\
-& \footnotesize{Worked on the \emph{KPI Framework} project which visualizes data obtained from GitHub and BitBucket in Grafana. Fixed issues in the application (Python), in the infrastructure code (Ansible, Kubernetes, docker-compose) and around CI/CD (Jenkins). Took part in redesigning the architecture to run the service as functions on Azure Cloud. 
+\textsc{2023--} & \textbf{Platform Engineer} at \emph{Sonar}, Geneva \\
+& \footnotesize{
+Worked in the platform team. The infrastructure is based on AWS and Kubernetes. Using Terraform and AWS CDK to manage the infrastructure. Using GitHub Actions for CI/CD. Using Datadog for monitoring and alerting. Used getport.io as internal development portal.
+Worked on migrating the CI system from Cirrus CI to GitHub Actions.
 
+Created standardized GitHub Actions and reusable workflows to support development teams.
+
+Managed and provisioned cloud infrastructure using Infrastructure as Code (IaC) with Terraform and AWS CDK, ensuring scalable and reproducible environments.
+
+Created the GitHub runners infrastructure using Actions Runner Controller.
+
+Built and optimized CI/CD pipelines with GitHub Actions to automate the build, testing, and deployment of applications.
+
+Implemented comprehensive monitoring and alerting solutions with Datadog to guarantee high availability and performance of the platform.
+
+Administered and integrated Port as the internal developer portal. Created self-service actions simplifying service bootstapping, onboarding to SonarQube, onboarding to CI including provisioning access to secrets
+
+Administered HashiCorp Vault and configured integration with GitHub Actions through OIDC.
+
+}\\
+
+\multicolumn{2}{c}{} \\
+\textsc{2020--2023} & \textbf{Devops Engineer} at \emph{Robert Bosch}, Remote \\
+& \footnotesize{Worked on the \emph{KPI Framework} project which visualizes data obtained from GitHub and BitBucket in Grafana. Fixed issues in the application (Python), in the infrastructure code (Ansible, Kubernetes, docker-compose) and around CI/CD (Jenkins). Took part in redesigning the architecture to run the service as functions on Azure Cloud.
+
+\emph{DroneTruth Project}:
+\begin{itemize}\footnotesize{
+\item Developed a self-service Python CLI tool using the Azure SDK that enabled developers to manage their own GPU-based cloud environments, reducing manual setup time.
+\item Deployed machine learning applications to Azure Kubernetes Service (AKS) using Kubernetes, Helm, and FluxCD for GitOps-based continuous delivery.
+\item Managed and automated ML pipelines with Azure DevOps and provisioned infrastructure with Terraform.
+\item
+}\end{itemize}
 Worked on the \emph{DroneTruth} project which uses machine learning to generate ground truth for autonomous driving software based on drone camera recordings. Used \emph{Azure DevOps} to run machine learning pipelines. Used \emph{Terraform} for managing cloud based GPU development environments. Created a Python CLI application utilising the Azure SDK to make the management of development environments self-service. Used \emph{Kubernetes} and \emph{Helm} with \emph{Flux2} to deploy applications on \emph{Azure Kubernetes Service}.
 }\\
 
 \multicolumn{2}{c}{} \\
-\textsc{2020--2021} & \textbf{Devops Consultant}, \href{https://hsup.nkfih.gov.hu}{\emph{Hungarian Startup University Program}} \\
-& \footnotesize{Worked alone to set up and automate the deployments of the HSUP application and related services. Created continuous integration and delivery pipelines using GitHub Actions and Renovate. Set up development, test and production environments using Docker Swarm. Set up monitoring and alerting using the Elastic (ElasticSearch, Kibana, Beats, APM) and Grafana (Prometheus, Loki, Tempo) stacks.}\\
+\textsc{2020--2021} & \textbf{Devops Consultant}, \emph{Hungarian Startup University Program} \\
+& \footnotesize{Independently designed and implemented the complete DevOps infrastructure and release lifecycle from the ground up for the HSUP application. Established robust CI/CD pipelines using GitHub Actions and automated dependency management with Renovate to eliminate manual work. Orchestrated containerized development, testing, and production environments using Docker Swarm. Implemented comprehensive observability with Prometheus, Loki and Tempo providing critical insights into application health and performance.}\\
 
 \multicolumn{2}{c}{} \\
 \textsc{2018--2019} & \textbf{Fullstack Development Consultant} at \emph{ViddL}, Budapest \\
-& \footnotesize{Worked on several applications written in JavaScript and TypeScript (Express, NestJs, React, MongoDB).}\\
+& \footnotesize{Worked on the ViddL backend and web frontend in JavaScript and TypeScript (Express, NestJs, React, MongoDB).}\\
 
 \multicolumn{2}{c}{} \\
 \textsc{2016--2020} & \textbf{Release Engineer / Devops Engineer} at \emph{Deutsche Telekom}, Remote \\
-& \footnotesize{Worked on the Charging and Billing Services project. Maintained and improved the custom build and CI system written in bash. Maintained the makefiles for the C++ sources and Apache Ant build files for the Java sources. Delivered the software into test and production environments. Migrated the version control from ClearCase to Git for the development teams}. Developed internal services using Go and React. Implemented the CI pipeline using Gitlab CI and Jenkins.\\
+&
+\vspace{-4pt}% Reduce space before list
+\begin{itemize}\footnotesize{
+\item Lead the successful migration of the entire development organization's version control system from IBM ClearCase to Git, modernizing workflows.
+\item Re-engineered and implemented modern CI/CD pipelines using GitLab CI and Jenkins, replacing a legacy Bash-based system.
+\item Developed internal applications and tooling with Go and React to automate processes and improve engineering efficiency.
+\item Maintained legacy build systems (Makefiles, Apache Ant) for critical C++ and Java-based charging and billing services, ensuring release stability.
+}\end{itemize}
+\\
 
 \multicolumn{2}{c}{} \\
 \textsc{2014--2016} & \textbf{Build Engineer} trainee at \emph{Nokia Networks}, Budapest \\
@@ -73,16 +113,17 @@ Migrated the build scripts from Apache Maven to Gradle. Developed plugins for Gr
 \begin{tabular}{rl}
 \textsc{Hungarian:} & Mothertongue\\
 \textsc{English:} &  Professional user, reading, writing and speaking\\
+\textsc{French:} &  Beginner\\
 \end{tabular}
 
 \section{Computer Skills}
 \begin{tabular}{rl}
-Languages: & \textsc{bash}, \textsc{python}, \textsc{JavaScript} (\textsc{nodejs, React}), \textsc{Groovy}, \textsc{Go} \\
-Tools: &  \textsc{git}, \textsc{Gradle}, \textsc{Jenkins}, \textsc{Ansible}, \textsc{Terraform}, \textsc{Docker}, \textsc{Kubernetes}
+Languages: & \textsc{python}, \textsc{bash}, \textsc{javascript} \\
+Tools: & \textsc{kubernetes}, \textsc{docker}, \textsc{terraform}, \textsc{aws cdk}, \textsc{git}, \textsc{github actions}, \textsc{jenkins}, \textsc{gradle}
 
 \end{tabular}
 
 \section{Interests and Activities}
 Technology, music \\
-Skiing, biking, wakeboarding, squash
+Skiing, biking, wakeboarding, hiking, squash
 \end{document}
